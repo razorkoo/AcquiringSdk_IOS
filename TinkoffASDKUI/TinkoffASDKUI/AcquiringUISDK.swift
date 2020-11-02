@@ -374,6 +374,11 @@ public class AcquiringUISDK: NSObject {
 		public var merchantIdentifier: String = "merchant.tcsbank.ApplePayTestMerchantId"
 		public var supportedNetworks: [PKPaymentNetwork] = [PKPaymentNetwork.masterCard, PKPaymentNetwork.visa]
 		public var capabilties: PKMerchantCapability = PKMerchantCapability.init(arrayLiteral: .capability3DS, .capabilityCredit, .capabilityDebit)
+        public var requiredBillingContactFields: Set<PKContactField>?
+        public var requiredShippingContactFields: Set<PKContactField>?
+        public var paymentSummaryItems: [PKPaymentSummaryItem]?
+        public var shippingMethods: [PKShippingMethod]?
+        
 		
 		public var countryCode: String = "RU"
 		public var currencyCode: String = "RUB"
@@ -401,11 +406,31 @@ public class AcquiringUISDK: NSObject {
 		request.currencyCode = paymentConfiguration.currencyCode
 		request.shippingContact = paymentConfiguration.shippingContact
 		request.billingContact = paymentConfiguration.billingContact
+        
+        // Additional editable fields 
+        if let requiredBillingContactFields = paymentConfiguration.requiredBillingContactFields {
+            request.requiredBillingContactFields = requiredBillingContactFields
+        }
+        
+        if let requiredShippingContactFields = paymentConfiguration.requiredShippingContactFields {
+            request.requiredShippingContactFields = requiredShippingContactFields
+        }
+        
+        if let paymentSummaryItems = paymentConfiguration.paymentSummaryItems {
+            request.paymentSummaryItems = paymentSummaryItems
+            request.paymentSummaryItems.append(PKPaymentSummaryItem.init(label: data.description ?? "", amount: NSDecimalNumber.init(value: Double(data.amount) / Double(100.0) )))
+                
+        } else {
+            request.paymentSummaryItems = [
+        
+                PKPaymentSummaryItem.init(label: data.description ?? "", amount: NSDecimalNumber.init(value: Double(data.amount) / Double(100.0) ))
+            ]
+        }
 		
-		request.paymentSummaryItems = [
-			PKPaymentSummaryItem.init(label: data.description ?? "", amount: NSDecimalNumber.init(value: Double(data.amount) / Double(100.0) ))
-		]
-		
+        if let shippingMethods = paymentConfiguration.shippingMethods {
+            request.paymentSummaryItems.append(contentsOf: shippingMethods)
+        }
+    
 		self.presentingViewController = presentingViewController
 		self.onPaymentCompletionHandler = completionHandler
         self.acquiringConfiguration = acquiringConfiguration
