@@ -59,7 +59,7 @@ class InputCardRequisitesController: NSObject {
 	private var maskedTextFieldCardExpDateDelegate: MaskedTextFieldDelegate!
 	private var maskedTextFieldCardCVCDelegate: MaskedTextFieldDelegate!
 
-	private var becomeFirstResponderListener: BecomeFirstResponderListener?
+	private weak var becomeFirstResponderListener: BecomeFirstResponderListener?
 	private weak var inputView: InputRequisitesViewInConnection? {
 		didSet {
 			inputView?.onCardNumberTouch = { [weak self] in
