@@ -85,7 +85,6 @@
 		2CCEF0A723C88C6C00CD3D44 /* CenterFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCEF0A623C88C6C00CD3D44 /* CenterFlowLayout.swift */; };
 		2CCEF0AB23C8A6DB00CD3D44 /* UICollectionReusableViewEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCEF0A923C8A6DB00CD3D44 /* UICollectionReusableViewEmpty.swift */; };
 		2CCEF0AC23C8A6DB00CD3D44 /* UICollectionReusableViewEmpty.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CCEF0AA23C8A6DB00CD3D44 /* UICollectionReusableViewEmpty.xib */; };
-		2CCF3D9C2444C3B7004317AC /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF3D9B2444C3B7004317AC /* Extension+UIColor.swift */; };
 		2CDD56C9246A8EC9005AB1B2 /* LabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDD56C7246A8EC9005AB1B2 /* LabelTableViewCell.swift */; };
 		2CDD56CA246A8EC9005AB1B2 /* LabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CDD56C8246A8EC9005AB1B2 /* LabelTableViewCell.xib */; };
 		2CE8E62D24485C970085FA82 /* ResistanceSpaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8E62B24485C970085FA82 /* ResistanceSpaceTableViewCell.swift */; };
@@ -100,6 +99,7 @@
 		2CFF6FC523C8BED600CF5E38 /* CardListStatusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF6FC323C8BED600CF5E38 /* CardListStatusCollectionViewCell.swift */; };
 		2CFF6FC623C8BED600CF5E38 /* CardListStatusCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CFF6FC423C8BED600CF5E38 /* CardListStatusCollectionViewCell.xib */; };
 		2CFF6FC723C8C2EB00CF5E38 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CFF6FC923C8C2EB00CF5E38 /* Localizable.strings */; };
+		690140B825AC616100E092DC /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690140B725AC616100E092DC /* Extension+UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -215,7 +215,6 @@
 		2CCEF0A623C88C6C00CD3D44 /* CenterFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterFlowLayout.swift; sourceTree = "<group>"; };
 		2CCEF0A923C8A6DB00CD3D44 /* UICollectionReusableViewEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionReusableViewEmpty.swift; sourceTree = "<group>"; };
 		2CCEF0AA23C8A6DB00CD3D44 /* UICollectionReusableViewEmpty.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICollectionReusableViewEmpty.xib; sourceTree = "<group>"; };
-		2CCF3D9B2444C3B7004317AC /* Extension+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
 		2CDD56C7246A8EC9005AB1B2 /* LabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTableViewCell.swift; sourceTree = "<group>"; };
 		2CDD56C8246A8EC9005AB1B2 /* LabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelTableViewCell.xib; sourceTree = "<group>"; };
 		2CE8E62B24485C970085FA82 /* ResistanceSpaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResistanceSpaceTableViewCell.swift; sourceTree = "<group>"; };
@@ -232,6 +231,7 @@
 		2CFF6FC423C8BED600CF5E38 /* CardListStatusCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardListStatusCollectionViewCell.xib; sourceTree = "<group>"; };
 		2CFF6FC823C8C2EB00CF5E38 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2CFF6FCA23C8C30800CF5E38 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		690140B725AC616100E092DC /* Extension+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Extension+UIColor.swift"; path = "Colors/Extension+UIColor.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -448,8 +448,8 @@
 		2CB1C1312459948800CCDA5E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				690140B725AC616100E092DC /* Extension+UIColor.swift */,
 				2C26CA1D243F096C00D78842 /* Extension+UIImage.swift */,
-				2CCF3D9B2444C3B7004317AC /* Extension+UIColor.swift */,
 				2C3B2F14245860D700E7C421 /* Extension+UIView.swift */,
 				2CB1C1322459950C00CCDA5E /* Extension+UITableView.swift */,
 			);
@@ -671,7 +671,6 @@
 				2CB0984123CC520E00EE13A7 /* InputState.swift in Sources */,
 				2CB765132451CF0500654795 /* InpuCardtRequisitesTableViewCell.swift in Sources */,
 				2CDD56C9246A8EC9005AB1B2 /* LabelTableViewCell.swift in Sources */,
-				2CCF3D9C2444C3B7004317AC /* Extension+UIColor.swift in Sources */,
 				2C9C7EF7239FEFE300DE4071 /* AcquiringPaymentViewController.swift in Sources */,
 				2C469571243747E700DBB3E7 /* CardListPresenter.swift in Sources */,
 				2CE8E62D24485C970085FA82 /* ResistanceSpaceTableViewCell.swift in Sources */,
@@ -694,6 +693,7 @@
 				2C572D1523B39066004B4619 /* ScrollableTableViewCell.swift in Sources */,
 				2C193C5F243E216D00058DDC /* StatusTableViewCell.swift in Sources */,
 				2C1CF27224646751007C96E6 /* PSLogoTableViewCell.swift in Sources */,
+				690140B825AC616100E092DC /* Extension+UIColor.swift in Sources */,
 				2CB0984723CC520E00EE13A7 /* InputMaskBuilder.swift in Sources */,
 				2CB765182451D53800654795 /* PopUpViewContoller.swift in Sources */,
 				2CFE99C224758F010077AAB4 /* ConfirmViewController.swift in Sources */,
