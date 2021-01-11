@@ -1,6 +1,27 @@
 # Changelog
 ## [Unreleased]
 
+## [2.1.4] - 2020-12-29
+
+### Fixed
+* update close logic in PopUpViewContoller (MIC-2393/https://github.com/TinkoffCreditSystems/AcquiringSdk_IOS/issues/15)
+
+## [2.1.3] - 2020-12-13
+
+### Added
+* add requestsTimeoutInterval parameter to AcquiringSdkConfiguration with default value (MIC-2395/https://github.com/TinkoffCreditSystems/AcquiringSdk_IOS/issues/12)
+* add all Item model's parameters to init (MIC-2384/https://github.com/TinkoffCreditSystems/AcquiringSdk_IOS/issues/17)
+
+### Fixed
+* cards without parentPaymentId presentation while perform recurrent payment
+* issues with cvc validation for standart and recurrent payment (MIC-2391/https://github.com/TinkoffCreditSystems/AcquiringSdk_IOS/issues/10)
+* freeze after card scanner finished work (MIC-2391/https://github.com/TinkoffCreditSystems/AcquiringSdk_IOS/issues/14)
+
+## [2.1.2] - 2020-12-10
+
+### Fixed
+* dark mode fix: background/tint colors for SBP button and payment logos image(MIC-2392)
+
 ## [2.1.1] - 2020-10-20
 
 ### Updated
