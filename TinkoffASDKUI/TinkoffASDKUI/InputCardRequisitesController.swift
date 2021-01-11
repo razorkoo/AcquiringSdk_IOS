@@ -105,7 +105,8 @@ class InputCardRequisitesController: NSObject {
 
             if let valueMM = mm, let valueYY = yy, cardRequisitesValidator.validateCardExpiredDate(year: valueYY, month: valueMM) {
                 if let textField = inputView?.textFieldCardExpDate {
-                    maskedTextFieldCardExpDateDelegate.put(text: "\(valueMM)/\(valueYY)", into: textField)
+                    let textString = valueMM < 10 ? String.init(format: "0%d/%d", valueMM, valueYY) : String.init(format: "%d/%d", valueMM, valueYY)
+                    maskedTextFieldCardExpDateDelegate.put(text: textString, into: textField)
                 }
                 activateStep(.inputCardCVC)
             } else {
