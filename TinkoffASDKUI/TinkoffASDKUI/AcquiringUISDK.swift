@@ -37,7 +37,7 @@ public class AcquiringViewConfiguration {
     }
 
     public struct FeaturesOptions {
-        var fpsEnabled: Bool = false
+        public var fpsEnabled: Bool = false
 
         init() {}
     }
